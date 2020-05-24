@@ -134,7 +134,6 @@ export default class TablePage extends Component {
                     </div>
                 </div>
                 </section>
-
         </div>
         )
     }

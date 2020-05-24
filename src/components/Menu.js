@@ -36,7 +36,18 @@ export default class Menu extends Component {
                             hash: "#link2"                            
                         }} 
                         className="nav-link"
-                        > Simple Link2 </Link>
+                        > Table - Link2 </Link>
+                        </li>
+                    </ul>
+                    <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li className="nav-item">
+                        <Link
+                        to={{
+                            pathname: "/link3",
+                            hash: "#link3"
+                        }} 
+                        className="nav-link"
+                        > Form - Link3 </Link>
                         </li>
                     </ul>
                     </nav>
