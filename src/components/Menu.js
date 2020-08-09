@@ -6,9 +6,9 @@ export default class Menu extends Component {
         return (
             <div>
                 {/* Main Sidebar Container */}
-                <aside className="main-sidebar sidebar-dark-primary elevation-4">
+                <aside className="main-sidebar sidebar-light elevation-4">
                 {/* Brand Logo */}
-                <a href="index.html" className="brand-link">
+                <a href="index.html" className="brand-link sidebar-green">
                     <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
                     <span className="brand-text font-weight-light">AdminLTE 3</span>
                 </a>

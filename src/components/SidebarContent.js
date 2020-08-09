@@ -5,7 +5,7 @@ export default class SidebarContent extends Component {
         return (
             <div>
                   {/* Control Sidebar */}
-<aside className="control-sidebar control-sidebar-dark">
+<aside className="control-sidebar control-sidebar-light">
   {/* Control sidebar content goes here */}
   <div className="p-3">
     <h5>Title</h5>
