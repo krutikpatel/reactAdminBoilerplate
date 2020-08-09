@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import GoogleLogin from 'react-google-login';
 
 export default class Login extends Component {
+    /*
+    render only if not authenticated
+    */
     responseGoogle = (response) => {
         console.log(response);
     }

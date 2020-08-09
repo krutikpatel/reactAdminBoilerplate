@@ -9,17 +9,27 @@ import {
     */
   } from './types';
   
-  export const signIn = userId => {
+  export const signIn = userId => async (dispatch) => {
+    /*
+    TODO: need to make authenticate api call ?
+    */
+  /*
     return {
       type: SIGN_IN,
       payload: userId
     };
+  */
+    dispatch({ type: SIGN_IN, payload: userId });
+    //history.push('/'); ????
   };
   
-  export const signOut = () => {
+  export const signOut = () => async (dispatch) => {
+    /*
     return {
       type: SIGN_OUT
     };
+    */
+    dispatch({ type: SIGN_OUT, payload: {} });
   };
 
   export const createTodo = formValues => async (dispatch, getState) => {

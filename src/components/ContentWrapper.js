@@ -10,7 +10,7 @@ export default class ContentWrapper extends Component {
         return (
             <div className="content-wrapper">
                 <Switch>
-                <Route path="/" component={BlankPage} exact />
+                <Route path="/" component={BlankPage} exact />{/* this should be protected route as well */}
                 <Route path="/link1" component={BlankPage} />
                 <Route path="/link2" component={TablePageRedux} />
                 <Route path="/link3" component={FormPage} />
