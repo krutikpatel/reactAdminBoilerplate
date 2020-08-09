@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { signIn } from '../actions';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import LoginComponent from './LoginComponent';
 
 class Login2 extends Component {
     /*
@@ -24,9 +25,11 @@ class Login2 extends Component {
         
         if(!this.props.isSignedIn) {
             return (
-                <div>           
+                <div class="hold-transition login-page">>           
                     <button className="btn btn-primary" onClick={this.onFormSubmit}>Login</button>             
+                    <LoginComponent></LoginComponent>
                 </div>
+                
             )
         }  else {
             //return ( <div></div>)
