@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import ReactDOM from 'react-dom';
 import { signIn } from '../actions';
-import Login from './Login';
+import { Redirect } from 'react-router-dom'
 
 class Login2 extends Component {
     /*
@@ -22,6 +21,7 @@ class Login2 extends Component {
             -we can put html inside GoogleLogin as shows below for styling
     */
     render() {
+        
         if(!this.props.isSignedIn) {
             return (
                 <div>           
@@ -29,8 +29,17 @@ class Login2 extends Component {
                 </div>
             )
         }  else {
-            return ( <div></div>)
+            //return ( <div></div>)
+            return ( <Redirect to={{ pathname: '/' }} />)
         }
+        
+       /*
+       return (
+        <div>           
+            <button className="btn btn-primary" onClick={this.onFormSubmit}>Login</button>             
+        </div>
+        )
+        */
     }
 }
 

@@ -1,4 +1,6 @@
 import backend from '../apis/backend';
+//import { Redirect } from 'react-router-dom'
+
 import {
     SIGN_IN,
     SIGN_OUT,
@@ -9,6 +11,13 @@ import {
     */
   } from './types';
   
+  /*
+  knote: store token and userId in localStorage to persist after page refresh
+    -this will help keep user logged in after page refresh
+
+    refer : https://stackoverflow.com/questions/39097440/on-react-router-how-to-stay-logged-in-state-even-page-refresh
+    for proper signIn method
+  */
   export const signIn = userId => async (dispatch) => {
     /*
     TODO: need to make authenticate api call ?
@@ -20,7 +29,9 @@ import {
     };
   */
     dispatch({ type: SIGN_IN, payload: userId });
-    //history.push('/'); ????
+    // - Save the JWT in localStorage
+    localStorage.setItem('authInfo', { token: "", userId: "userId" });
+    //history.push('/'); //????    --> useing Redirect in Long2 page instead of this.
   };
   
   export const signOut = () => async (dispatch) => {

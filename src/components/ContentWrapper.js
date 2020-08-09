@@ -16,8 +16,6 @@ export default class ContentWrapper extends Component {
                 <Route path="/link3" component={FormPage} />
                 <Route path="/link4" component={Login} />
                 </Switch>
-
-                
             </div>
         )
     }
